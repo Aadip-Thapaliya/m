@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocg-ssm-thesis"
+version = "0.1.0"
+description = "Research scaffold for online causal-graph-conditioned state-space forecasting"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT; bundled third-party datasets have separate licenses"}
+authors = [{name = "Aadip Thapaliya"}]
+dependencies = ["numpy>=1.24", "pandas>=2.0", "PyYAML>=6.0", "scipy>=1.10"]
+
+[project.optional-dependencies]
+research = ["torch>=2.2", "tigramite>=5.2", "causal-learn>=0.1.3", "river>=0.21"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

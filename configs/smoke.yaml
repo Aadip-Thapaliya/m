@@ -1,0 +1,23 @@
+seed: 7
+dataset:
+  scenario: abrupt
+  n_steps: 240
+  n_variables: 5
+  change_points: [110, 180]
+  noise_scale: 0.12
+  train_fraction: 0.30
+discovery:
+  forgetting_factor: 0.97
+  ridge: 5.0
+  sparsity_threshold: 0.08
+  max_lag: 1
+adaptation:
+  page_hinkley_delta: 0.005
+  page_hinkley_threshold: 1.5
+model:
+  hidden_decay: 0.75
+  graph_weight: 0.85
+evaluation:
+  horizon: 1
+  graph_threshold: 0.10
+  seeds: [7]

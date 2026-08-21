@@ -1,0 +1,7 @@
+base_config: configs/default.yaml
+scenarios: [stationary, abrupt, gradual, recurring, confounded]
+seeds: [7, 21, 42, 87, 123]
+n_steps: 1600
+n_variables: 6
+output_dir: outputs/benchmark
+models: [persistence, static_var, online_var, graph_conditioned_ssm]
